@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 970px;
+    margin: auto;
+}
+.navbar {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 auto;
+    background: #333;
+    color: #eee;
+}
+.navbar .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar .nav .nav-item {
+    width: 10%;
+    height: 48px;
+    text-align: center;
+    float: left;
+}
+.navbar .icon {
+    padding: 8px 0;
+}
+.navbar a {
+    display: block;
+    min-width: 32px;
+    height: 32px;
+    text-decoration: none;
+    color: #fff;
+}
+.navbar a:hover {
+    color: #888;
+}
+.icon {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-home {
+    background-image: url('imgs/mac.png');
+}
+.icon-home:hover {
+    background-image: url('imgs/mac_hover.png');
+}
+.icon-search {
+    background-image: url('imgs/search.png');
+}
+.icon-search:hover {
+    background-image: url('imgs/search_hover.png');
+}
+.icon-shopping {
+    background-image: url('imgs/shopping.png');
+}
+.icon-shopping:hover {
+    background-image: url('imgs/shopping_hover.png');
+}
