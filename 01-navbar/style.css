@@ -1,12 +1,15 @@
+/* to reset html and body */
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+/* 在超宽屏幕上使主体内容有限宽度，且居中显示 */
 .container {
     max-width: 970px;
     margin: auto;
 }
+/* 导航条占据全部宽度，设置一定高度和背景色。 */
 .navbar {
     width: 100%;
     height: 48px;
@@ -15,33 +18,35 @@ html, body {
     background: #333;
     color: #eee;
 }
+/* 重置 ul 标签的样式 */
 .navbar .nav {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+/* 每个按钮的样式，使用 float 来控制 ul>li 的横向排列 */
 .navbar .nav .nav-item {
     width: 10%;
     height: 48px;
     text-align: center;
     float: left;
 }
-.navbar .icon {
+/* 设置每个人图标的最小大小和位置 */
+.icon {
     padding: 8px 0;
+    min-width: 32px;
+	height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .navbar a {
     display: block;
-    min-width: 32px;
     height: 32px;
-    text-decoration: none;
+    text-decoration: none; /* 隐藏下划线 */
     color: #fff;
 }
 .navbar a:hover {
     color: #888;
-}
-.icon {
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .icon-home {
     background-image: url('imgs/mac.png');
