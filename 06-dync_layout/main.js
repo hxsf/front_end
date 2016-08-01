@@ -1,6 +1,6 @@
 // (function () {
     var default_item_width = 200;
-    var last_list_num;
+    var last_list_num = 0;
     function getInt16String() {
         return parseInt(Math.random()*200+56).toString(16);
     }
@@ -19,7 +19,7 @@
     var _preview = document.getElementsByClassName('preview')[0];
     var _main = document.getElementsByClassName('main')[0];
     function init () {
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 20; i++) {
             _preview.innerHTML += Random.el(200, 300);
         }
     }
@@ -29,7 +29,6 @@
         if (list_num === last_list_num) {
             return;
         }
-        last_list_num = list_num;
         _preview.style.width = `${list_num * default_item_width}px`;
         var lists = [];
         for (var i = 0; i < list_num; i++) {
@@ -44,15 +43,21 @@
                     min_height = lists[j].top;
                 }
             }
+            items[i].style.transitionDelay = (list_num > last_list_num ? i : (items.length - i)) * 0.2 + 's';
             items[i].style.left = lists[min_height_list].left + 'px';
             items[i].style.top = lists[min_height_list].top + 10 + 'px';
             lists[min_height_list].top += items[i].offsetHeight + 20;
         }
+        var total_height = 0;
         for (var i = 0; i < list_num; i++) {
-            if (_preview.offsetHeight < lists[i].top) {
-                _preview.style.height = `${lists[i].top}px`;
+            if (total_height < lists[i].top) {
+                total_height = lists[i].top;
             }
         }
+        setTimeout(() => {
+            _preview.style.height = `${total_height + 20}px`;
+        }, items.length * 0.2);
+        last_list_num = list_num;
     }
     window.onload = function () {
         init();

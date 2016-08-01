@@ -36,7 +36,6 @@ html, body {
 .preview {
     position: relative;
     margin: auto;
-    padding: 15px;
 }
 .preview-item {
     position: absolute;
