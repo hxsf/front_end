@@ -1,5 +1,5 @@
-// (function () {
-    var default_item_width = 200;
+(function () {
+    var default_item_width = 120;
     var last_list_num = 0;
     function getInt16String() {
         return parseInt(Math.random()*200+56).toString(16);
@@ -13,14 +13,14 @@
         },
         el: function (min = 100, max = 300) {
             var size = this.size(min, max);
-            return `<div class="preview-item" style="background-color: ${this.color()};height: ${size}px;line-height: ${size}px;">${default_item_width} X ${size}</div>`
+            return `<div class="preview-item" style="background-color: ${this.color()};height: ${size}px;line-height: ${size}px;top: 0;left: 0;">${default_item_width} X ${size}</div>`
         }
     }
     var _preview = document.getElementsByClassName('preview')[0];
     var _main = document.getElementsByClassName('main')[0];
     function init () {
-        for (var i = 0; i < 20; i++) {
-            _preview.innerHTML += Random.el(200, 300);
+        for (var i = 0; i < 50; i++) {
+            _preview.innerHTML += Random.el(100, 200);
         }
     }
     function relayout () {
@@ -43,6 +43,7 @@
                     min_height = lists[j].top;
                 }
             }
+            items[i].style.width = default_item_width - 20 + 'px';
             items[i].style.transitionDelay = (list_num > last_list_num ? i : (items.length - i)) * 0.2 + 's';
             items[i].style.left = lists[min_height_list].left + 'px';
             items[i].style.top = lists[min_height_list].top + 10 + 'px';
@@ -61,7 +62,8 @@
     }
     window.onload = function () {
         init();
+
         relayout();
     }
     window.onresize = relayout;
-// })();
+})();
