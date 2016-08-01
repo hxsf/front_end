@@ -8,3 +8,5 @@ I create this repo just for *EvE*.
 2. [side bar](./02-goto_top/)
 3. [grid system](./03-grid_system/)
 4. [media query](./04-media_query/)
+5. [auto layout](./05-auto_layout/)
+6. [dynamic layout](./06-dynamic_layout/)
