@@ -1,0 +1,6 @@
+{
+  "name": "Front end demos for eve",
+  "tagline": "some demos for EVE",
+  "body": "# Some Front-End Demo\r\n\r\n> author: hxsf@ihxsf.cn\r\n\r\nI create this repo just for *EvE*.\r\n\r\n1. [nav and nav-bar](./01-navbar/)\r\n2. [side bar](./02-goto_top/)\r\n3. [grid system](./03-grid_system/)\r\n4. [media query](./04-media_query/)\r\n5. [auto layout](./05-auto_layout/)\r\n6. [dynamic layout](./06-dynamic_layout/)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
